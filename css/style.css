@@ -1,3 +1,37 @@
 body{
     /* Background pattern from Subtle Patterns */
+    background-image: url("../images/intersection.png");
+}
+.container{
+    width: 1024px;
+    margin: 0 auto;
+}
+header{
+    background-color: black;
+    color: white;
+}
+.color{
+    color:
+}
+.logo{
+    float:left;
+    text-transform: uppercase;
+}
+.navigation{
+    float:right;
+}
+.navigation > ol{
+    list-style-type: none;
+    text-transform: uppercase;
+}
+.navigation ol > li{
+    list-style-type: none;
+    float:left;
+    text-transform: uppercase;
+    padding-right: 5px;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
 }

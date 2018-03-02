@@ -9,6 +9,9 @@ body{
 header{
     background-color: black;
     color: white;
+    font-size: 20px;
+    padding:15px;
+    line-height: 45px;
 }
 .color{
     color:
@@ -20,7 +23,7 @@ header{
 .navigation{
     float:right;
 }
-.navigation > ol{
+.navigation  ol{
     list-style-type: none;
     text-transform: uppercase;
 }
@@ -28,10 +31,23 @@ header{
     list-style-type: none;
     float:left;
     text-transform: uppercase;
-    padding-right: 5px;
+    padding-right: 25px;
+}
+.navigation ol > li:last-of-type{
+    padding-right: 0px;
+}
+.navigation > ol a{
+    text-decoration: none;
+    color: white;
 }
 .clearfix::after{
     content: "";
     display: block;
     clear: both;
+}
+.navigation > ol ul{
+    display: none;
+}
+.navigation > ol ul:hover{
+    display: block;
 }

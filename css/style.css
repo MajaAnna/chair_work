@@ -14,7 +14,8 @@ header{
     line-height: 45px;
 }
 .color{
-    color:
+    color:#DC956B;
+    font-weight: bold;
 }
 .logo{
     float:left;
@@ -26,12 +27,12 @@ header{
 .navigation  ol{
     list-style-type: none;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 .navigation ol > li{
-    list-style-type: none;
     float:left;
     text-transform: uppercase;
-    padding-right: 25px;
+    padding-right: 40px;
 }
 .navigation ol > li:last-of-type{
     padding-right: 0px;
@@ -46,7 +47,17 @@ header{
     clear: both;
 }
 .navigation > ol ul{
-    display: none;
+    /*display: none;*/
+    background-color: black;
+    position:absolute;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    list-style-type: none;
+
+}
+ol ul > li{
+    padding-left: 0;
+
 }
 .navigation > ol ul:hover{
     display: block;

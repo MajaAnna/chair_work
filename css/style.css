@@ -1,3 +1,14 @@
+#374145
+#3B5D68
+#DC956B
+#F3B873
+#FFF3CE
+
+html{
+    font-size:16px;
+    font-family: 'Raleway', sans-serif;
+}
+
 body{
     /* Background pattern from Subtle Patterns */
     background-image: url("../images/intersection.png");
@@ -6,10 +17,12 @@ body{
     width: 1024px;
     margin: 0 auto;
 }
+
+/*HEADER*/
 header{
     background-color: black;
     color: white;
-    font-size: 20px;
+    font-size: 1.2rem;
     padding:15px;
     line-height: 45px;
 }
@@ -28,6 +41,7 @@ header{
     list-style-type: none;
     text-transform: uppercase;
     margin-bottom: 10px;
+    background-color: black;
 }
 .navigation ol > li{
     float:left;
@@ -46,19 +60,82 @@ header{
     display: block;
     clear: both;
 }
+
+/*second nav*/
 .navigation > ol ul{
-    /*display: none;*/
-    background-color: black;
+    display: none;
     position:absolute;
     text-transform: capitalize;
     letter-spacing: 2px;
     list-style-type: none;
 
 }
+.navigation_second > ul > li {
+    padding:0 25px 0 25px;
+    background-color: black;
+}
+
+.navigation_second > ul{
+    margin-left: -25px;
+}
 ol ul > li{
     padding-left: 0;
-
 }
-.navigation > ol ul:hover{
+
+/*second nav - line of break with an arrow*/
+.navigation_second ul > li:first-of-type{
+    background: transparent;
+    padding-top: 10px;
+}
+.arrow_up{
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: black;
+}
+
+ol > li:hover ul{
     display: block;
+}
+
+/*SLIDER*/
+.slider{
+    padding: 50px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(56%, rgba(246,246,246,1)), color-stop(100%, rgba(209,207,209,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1cfd1', GradientType=0 );
+}
+.slider img{
+    float:left;
+    width: 40%;
+}
+.slider .slider_header{
+    float:left;
+    text-align: center;
+    width: 50%;
+}
+.slider_header h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding:50px;
+}
+.slider_header p{
+    font-size: 1rem;
+    padding-bottom:30px;
+}
+.slider_header input[type="button"]{
+    font-size: 1.5rem;
+    padding:10px 30px 10px 30px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #DC956B;
+    border:none;
+    color: white;
 }

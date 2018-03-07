@@ -1,8 +1,8 @@
-#374145
-#3B5D68
-#DC956B
-#F3B873
-#FFF3CE
+/*#374145*/
+/*#3B5D68*/
+/*#DC956B*/
+/*#F3B873*/
+/*#FFF3CE*/
 
 html{
     font-size:16px;
@@ -11,11 +11,24 @@ html{
 
 body{
     /* Background pattern from Subtle Patterns */
-    background-image: url("../images/intersection.png");
+    /*background-image: url("../images/intersection.png");*/
+    background-color: white;
 }
 .container{
-    width: 1024px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 30px 0 30px;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.color{
+    color:#24BA9F;
+    font-weight: bold;
 }
 
 /*HEADER*/
@@ -26,14 +39,15 @@ header{
     padding:15px;
     line-height: 45px;
 }
-.color{
-    color:#DC956B;
-    font-weight: bold;
-}
+
 .logo{
     float:left;
     text-transform: uppercase;
+    font-weight: bold;
 }
+
+/*navigation*/
+
 .navigation{
     float:right;
 }
@@ -42,6 +56,7 @@ header{
     text-transform: uppercase;
     margin-bottom: 10px;
     background-color: black;
+    font-weight: bold;
 }
 .navigation ol > li{
     float:left;
@@ -54,11 +69,6 @@ header{
 .navigation > ol a{
     text-decoration: none;
     color: white;
-}
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
 }
 
 /*second nav*/
@@ -101,41 +111,173 @@ ol > li:hover ul{
 
 /*SLIDER*/
 .slider{
-    padding: 50px;
-    margin-bottom: 20px;
+    padding: 50px 20px 50px 20px;
+    width:100%;
+    margin-bottom: 30px;
     background: rgba(255,255,255,1);
-    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(56%, rgba(246,246,246,1)), color-stop(100%, rgba(209,207,209,1)));
-    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
-    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
-    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    background:
+            -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    background:
+            -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(56%, rgba(246,246,246,1)), color-stop(100%, rgba(209,207,209,1)));
+    background:
+            -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    background:
+            -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
+    background:
+            -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 56%, rgba(209,207,209,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1cfd1', GradientType=0 );
 }
-.slider img{
+.slider .img{
     float:left;
-    width: 40%;
+    width: 35%;
+    background: url("../images/black_chair.png") no-repeat center/cover;
+    height: 430px;
+    position:relative;
+    left:-73px;
+    top:17px;
 }
-.slider .slider_header{
+.slider_header{
     float:left;
     text-align: center;
-    width: 50%;
+    width: 35%;
 }
 .slider_header h1{
-    font-size: 2rem;
+    font-size: 2.6rem;
+    word-spacing: .2rem;
     text-transform: uppercase;
-    padding:50px;
+    padding:85px 20px 30px 0;
+    font-weight: bold;
 }
 .slider_header p{
     font-size: 1rem;
     padding-bottom:30px;
 }
-.slider_header input[type="button"]{
+button{
     font-size: 1.5rem;
-    padding:10px 30px 10px 30px;
+    padding:15px 40px 15px 40px;
     text-transform: uppercase;
-    border-radius: 5px;
-    background-color: #DC956B;
+    border-radius: 10px;
+    background-color: #24BA9F;
     border:none;
     color: white;
+}
+.slider_arrow{
+    text-align: center;
+    color: #24BA9F;
+    font-size: 5rem;
+    line-height: 400px;
+    z-index: 20;
+    float:left;
+    width:15%;
+}
+
+/*sekcja ze zdjęciami*/
+.block{
+    width: 32%;
+    height:250px;
+    margin-right: 2%;
+}
+.block:last-of-type{
+    margin-right:0;
+}
+.photo1{
+    background: url("../images/box1_img.jpg") no-repeat center/cover;
+    float:left;
+    position:relative;
+}
+.photo2{
+    background: url("../images/box2_img.jpg") no-repeat center/cover;
+    float: left;
+    position:relative;
+}
+.block_text{
+    float: left;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    padding:20px;
+    height:260px;
+}
+.block_text h3{
+    font-weight: bold;
+}
+.border1::after{
+    border-bottom: 7px solid #24BA9F;
+    width:50%;
+    content:"";
+    display: block;
+}
+.border2::after{
+    border-bottom: 7px solid #24BA9F;
+    width:30%;
+    content:"";
+    display: block;
+}
+.block_text p{
+    padding-top:10px;
+}
+
+/*sekcja z cennikiem*/
+.slider_price{
+    background-color: #F1F1F1;
+    margin-top: 40px;
+    padding: 50px;
+}
+.slider_price h1{
+    color:#535353;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.price_box{
+    width: 30%;
+    margin-right: 3%;
+    float:left;
+    margin-top: 60px;
+    height:500px;
+    border-radius: 2px;
+    padding:25px;
+    text-align: center;
+}
+.price_box:last-of-type{
+    margin-right: 0;
+}
+.price1{
+    border:1px solid #C3C3C3;
+}
+.price1 h1{
+    text-transform: uppercase;
+    color:#24BA9F;
+    font-size: 1.5rem;
+}
+.number_circle {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    border: 1px solid #C3C3C3;
+    background-color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #C3C3C3;
+    text-align: center;
+    margin: 20px auto;
+    line-height: 1.5rem;
+}
+.number_circle sup{
+    font-size: 0.9rem;
+}
+.number_circle p{
+    font-weight: bold;
+}
+.number_circle .small{
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+/*.span_lower{*/
+    /*position:relative;*/
+    /*display:block;*/
+    /*top:3px;*/
+/*}*/
+.price2{
+    border:1px solid #C3C3C3;
 }

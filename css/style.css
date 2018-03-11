@@ -1,9 +1,3 @@
-/*#374145*/
-/*#3B5D68*/
-/*#DC956B*/
-/*#F3B873*/
-/*#FFF3CE*/
-
 html{
     font-size:16px;
     font-family: 'Raleway', sans-serif;
@@ -27,7 +21,7 @@ body{
 }
 
 .color{
-    color:#24BA9F;
+    color:#27C7AB;
     font-weight: bold;
 }
 
@@ -158,13 +152,13 @@ button{
     padding:15px 40px 15px 40px;
     text-transform: uppercase;
     border-radius: 10px;
-    background-color: #24BA9F;
+    background-color: #27C7AB;
     border:none;
     color: white;
 }
 .slider_arrow{
     text-align: center;
-    color: #24BA9F;
+    color: #27C7AB;
     font-size: 5rem;
     line-height: 400px;
     z-index: 20;
@@ -202,82 +196,368 @@ button{
     font-weight: bold;
 }
 .border1::after{
-    border-bottom: 7px solid #24BA9F;
+    border-bottom: 7px solid #27C7AB;
     width:50%;
     content:"";
     display: block;
 }
 .border2::after{
-    border-bottom: 7px solid #24BA9F;
+    border-bottom: 7px solid #27C7AB;
     width:30%;
     content:"";
     display: block;
+    margin-bottom:30px;
 }
 .block_text p{
     padding-top:10px;
 }
 
 /*sekcja z cennikiem*/
-.slider_price{
+.section_slider{
     background-color: #F1F1F1;
-    margin-top: 40px;
-    padding: 50px;
+    margin: 40px 0 20px 0;
+    padding:30px 0 30px 0;
+    text-transform: uppercase;
+    text-align:center;
 }
-.slider_price h1{
+.slider_title{
+    padding-bottom:5px;
     color:#535353;
-    text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size:1.2rem;
+    text-align:left
 }
-.price_box{
-    width: 30%;
-    margin-right: 3%;
-    float:left;
-    margin-top: 60px;
-    height:500px;
-    border-radius: 2px;
-    padding:25px;
-    text-align: center;
-}
-.price_box:last-of-type{
-    margin-right: 0;
-}
-.price1{
-    border:1px solid #C3C3C3;
-}
-.price1 h1{
-    text-transform: uppercase;
-    color:#24BA9F;
+.section_slider h2{
+    color: #27C7AB;
     font-size: 1.5rem;
+    padding-top: -60px;
 }
-.number_circle {
-    border-radius: 50%;
-    width: 130px;
-    height: 130px;
-    border: 1px solid #C3C3C3;
-    background-color: white;
-    padding: 10px;
-    text-transform: uppercase;
-    font-size: 3rem;
-    color: #C3C3C3;
+.boxes{
+    width: 32%;
+    height:520px;
+    margin: 50px 2% 30px 0;
+    border-radius: 2px;
     text-align: center;
-    margin: 20px auto;
-    line-height: 1.5rem;
+    z-index: 10;
 }
-.number_circle sup{
-    font-size: 0.9rem;
+.boxes:last-of-type{
+    margin-right:0;
 }
-.number_circle p{
-    font-weight: bold;
-}
-.number_circle .small{
-    font-size: 1.1rem;
-    font-weight: normal;
-}
-/*.span_lower{*/
-    /*position:relative;*/
-    /*display:block;*/
-    /*top:3px;*/
-/*}*/
-.price2{
+.box1{
+    float:left;
+    background-color: #F9F9F9;
     border:1px solid #C3C3C3;
+    position:relative;
 }
+.circle::before{
+    display:block;
+    content:"";
+    background-color: white;
+    border:1px solid #C3C3C3;
+    position:relative;
+    border-radius: 50%;
+    width:60px;
+    height:60px;
+    top:-40px;
+    left: 50%;
+    margin-left: -30px;
+}
+.circle_dot::after{
+    display:block;
+    content:"";
+    background-color: #C3C3C3;
+    position:relative;
+    border-radius: 50%;
+    width:28px;
+    height:28px;
+    left: 50%;
+    top:-84px;
+    margin-left: -14px;
+
+}
+.price_circle{
+    background-color: white;
+    border:1px solid #C3C3C3;
+    position:relative;
+    margin:15px auto 25px auto;
+    border-radius: 50%;
+    width:135px;
+    height:135px;
+}
+.price_circle .price_text{
+    color: #C3C3C3;
+    padding:15px;
+    font-weight:bold;
+    left: 50%;
+    top: 50%;
+    margin-left: -111px;
+    margin-top: -58px;
+    position:relative;
+    text-align: center;
+}
+.price_text p:first-child{
+    font-weight: bold;
+    font-size: 3rem;
+}
+.price_text sup{
+    font-size:1rem;
+    right:10px;
+    top:-25px;
+}
+.price_text p:last-child{
+    font-size: 1rem;
+    left:-10px;
+    position: relative;
+}
+.price_button_1{
+    background-color: #27C7AB;
+    font-size:1rem;
+    padding:5px 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.line{
+    width:100%;
+    list-style-type: none;
+    text-transform: none;
+    padding: 10px;
+    text-align: center;
+    color:#959595;
+    font-size: 1.3rem;
+    z-index: 5;
+    border-left:1px solid #C3C3C3;
+}
+.line_dark_top{
+    background-color: #E4E4E4;
+    border-top: 1px solid white
+}
+.line_dark{
+    background-color: #E4E4E4;
+}
+.line_light{
+    background-color: #F1F1F1;
+    color:#7A7A7A;
+}
+
+/*box 2*/
+.box2{
+    float:left;
+    background-color: #27C7AB;
+    border:1px solid #27C7AB;
+    position:relative;
+    z-index: 10;
+}
+
+.add_color{
+    color: #27C7AB;
+}
+.circle2::before{
+    display:block;
+    content:"";
+    background-color: #27C7AB;
+    border:1px solid #27C7AB;
+    position:relative;
+    border-radius: 50%;
+    width:60px;
+    height:60px;
+    top:-40px;
+    left: 50%;
+    margin-left: -30px;
+}
+.circle_dot2::after{
+    display:block;
+    content:"";
+    background-color: #F9F9F9;
+    position:relative;
+    border-radius: 50%;
+    width:28px;
+    height:28px;
+    left: 50%;
+    top:-84px;
+    margin-left: -14px;
+
+}
+.price_circle2{
+    background-color: #F9F9F9;
+    border:1px solid #27C7AB;
+    position:relative;
+    margin:15px auto 25px auto;
+    border-radius: 50%;
+    width:135px;
+    height:135px;
+}
+.price_circle2 .price_text2{
+    color: #27C7AB;
+    padding:15px;
+    font-weight:bold;
+    left: 50%;
+    top: 50%;
+    margin-left: -111px;
+    margin-top: -58px;
+    position:relative;
+    text-align: center;
+}
+.price_text2 p:first-child{
+    font-weight: bold;
+    font-size: 3rem;
+}
+.price_text2 sup{
+    font-size:1rem;
+    right:10px;
+    top:-25px;
+}
+.price_text2 p:last-child{
+    font-size: 1rem;
+    left:-10px;
+    position: relative;
+}
+.price_button_2{
+    color:#27C7AB;
+    background-color: #F9F9F9;
+    font-size:1rem;
+    padding:5px 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.box2 h2{
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.slider_price{*/
+    /*background-color: #F1F1F1;*/
+    /*margin-top: 40px;*/
+/*}*/
+
+/*!*tytuł 'cennik'*!*/
+/*.slider_price h1{*/
+    /*color:#535353;*/
+    /*text-transform: uppercase;*/
+    /*font-size: 1.2rem;*/
+    /*padding-top: 40px;*/
+/*}*/
+/*!*contour and circle with a dot*!*/
+/*.price_box{*/
+    /*width: 30%;*/
+    /*margin: 30px 1.5% 0 1.5%;*/
+    /*float:left;*/
+    /*height:500px;*/
+    /*border-radius: 2px;*/
+    /*text-align: center;*/
+/*}*/
+/*.price_box:last-of-type{*/
+    /*margin-right: 1.5%;*/
+/*}*/
+/*.price_box:first-of-type{*/
+    /*margin-left: 1.5%;*/
+/*}*/
+
+/*.circle_top::before{*/
+    /*display:block;*/
+    /*content:"";*/
+    /*width:60px;*/
+    /*height:60px;*/
+    /*background-color: white;*/
+    /*border:1px solid #C3C3C3;*/
+    /*border-radius: 50%;*/
+    /*position:relative;*/
+    /*top:50px;*/
+    /*left:50%;*/
+    /*margin-left: -30px;*/
+/*}*/
+/*.circle_dot::before{*/
+    /*display:block;*/
+    /*content:"";*/
+    /*width:30px;*/
+    /*height:30px;*/
+    /*background-color: #C3C3C3;*/
+    /*border:1px solid #C3C3C3;*/
+    /*border-radius: 50%;*/
+    /*position:relative;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+/*}*/
+
+/*!*particular boxes*!*/
+/*.box1{*/
+    /*border:1px solid #C3C3C3;*/
+/*}*/
+/*!*'basic plan'*!*/
+/*.box1 h1{*/
+    /*text-transform: uppercase;*/
+    /*color:#24BA9F;*/
+    /*font-size: 1.5rem;*/
+    /*padding:25px 0;*/
+/*}*/
+/*.number_circle {*/
+    /*border-radius: 50%;*/
+    /*width: 130px;*/
+    /*height: 130px;*/
+    /*border: 1px solid #C3C3C3;*/
+    /*background-color: white;*/
+    /*margin: 0 auto;*/
+/*}*/
+/*.number_circle_text{*/
+    /*padding: 30px;*/
+    /*text-transform: uppercase;*/
+    /*font-size: 3rem;*/
+    /*color: #C3C3C3;*/
+    /*text-align: center;*/
+    /*line-height: 2.5rem;*/
+    /*position:relative;*/
+    /*bottom:-5px;*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.number_circle sup{*/
+    /*position:relative;*/
+    /*font-size: 0.9rem;*/
+    /*top:-25px;*/
+/*}*/
+/*.number_circle p{*/
+    /*font-weight: bold;*/
+/*}*/
+/*.number_circle .small{*/
+    /*font-size: 1rem;*/
+    /*font-weight: normal;*/
+/*}*/
+
+/*.box2{*/
+    /*border:1px solid #C3C3C3;
+}*/

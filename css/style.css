@@ -1,6 +1,9 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
 html{
     font-size:16px;
-    font-family: 'Raleway', sans-serif;
 }
 
 body{
@@ -229,11 +232,11 @@ button{
 .section_slider h2{
     color: #27C7AB;
     font-size: 1.5rem;
-    padding-top: -60px;
+    margin-top: -60px;
 }
 .boxes{
     width: 32%;
-    height:520px;
+    height:540px;
     margin: 50px 2% 30px 0;
     border-radius: 2px;
     text-align: center;
@@ -312,20 +315,41 @@ button{
     background-color: #27C7AB;
     font-size:1rem;
     padding:5px 30px;
-    margin-bottom: 20px;
     border-radius: 5px;
 }
-.line{
+.price_button_1{
+    position:absolute;
+    bottom:20px;
+    left: 50%;
+    margin-left: -15%;
+}
+
+.price_button_2 {
+    position:absolute;
+    bottom:0;
+    left: 50%;
+    margin-left: -15%;
+}
+
+.boxes ul{
     width:100%;
     list-style-type: none;
     text-transform: none;
-    padding: 10px;
     text-align: center;
     color:#959595;
     font-size: 1.3rem;
-    z-index: 5;
-    border-left:1px solid #C3C3C3;
 }
+.box1 ul li{
+    padding: 10px;
+    border-left:1px solid #C3C3C3;
+    border-right:1px solid #C3C3C3;
+}
+.box2 ul li{
+    padding: 10px;
+    border-left:1px solid #27C7AB;
+    border-right:1px solid #27C7AB;
+}
+
 .line_dark_top{
     background-color: #E4E4E4;
     border-top: 1px solid white
@@ -426,8 +450,8 @@ button{
 
 .formLeft{
     float: left;
-    width: 60%;
-    margin: 20px 30px 50px 0;
+    width: 67%;
+    margin: 20px 1% 50px 0;
 }
 
 .header h2{
@@ -438,9 +462,17 @@ button{
     font-size:1.4rem;
 }
 .formRight{
-    float: right;
-    width: 30%;
-    margin: 20px 0 50px;
+    float: left;
+    width: 32%;
+}
+.formRight img{
+    margin-top:-10px;
+}
+.formRight button{
+    width:100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 /*FORM*/
@@ -455,6 +487,8 @@ input[type=email]{
     width:90%;
 }
 textarea{
+    resize: none;
+    height:200px;
     width:90%;
     padding: 15px;
     font-size: 1.6rem;
@@ -479,139 +513,83 @@ textarea{
     font-family: 'Raleway', sans-serif;
 }
 
+.checkboxContainer{
+    display:block;
+    position:relative;
+    color:#7A7A7A;
+    margin:35px 0 50px;
+    font-size: 1.2rem;
+    cursor:pointer;
+    padding-left:4rem;
+}
+/* Hide the browser's default checkbox */
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
 
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid #27C7AB;;
+}
 
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
 
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark::after {
+    display: block;
+}
 
+/* Style the checkmark/indicator */
+.checkboxContainer .checkmark::after {
+    left: 3px;
+    top: 5px;
+    background: url("../images/form_ok.jpg") center/cover;
+    height: 80%;
+    width: 80%;
+}
 
+footer{
+    height: 80px;
+    width:100%;
+    word-spacing: .1rem;
+    color: #959595;
+}
+.footerText{
+    float:left;
+    width: 68%;
+    margin-top:1rem;
+}
+.footerRight{
+    float:left;
+    width: 32%;
+}
 
+.footerRight{
+    text-transform: uppercase;
+}
 
+.images{
+    float: left;
+}
 
+.sit{
+    float:right;
+    display: block;
+    margin-top:1rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.slider_price{*/
-    /*background-color: #F1F1F1;*/
-    /*margin-top: 40px;*/
-/*}*/
-
-/*!*tytuł 'cennik'*!*/
-/*.slider_price h1{*/
-    /*color:#535353;*/
-    /*text-transform: uppercase;*/
-    /*font-size: 1.2rem;*/
-    /*padding-top: 40px;*/
-/*}*/
-/*!*contour and circle with a dot*!*/
-/*.price_box{*/
-    /*width: 30%;*/
-    /*margin: 30px 1.5% 0 1.5%;*/
-    /*float:left;*/
-    /*height:500px;*/
-    /*border-radius: 2px;*/
-    /*text-align: center;*/
-/*}*/
-/*.price_box:last-of-type{*/
-    /*margin-right: 1.5%;*/
-/*}*/
-/*.price_box:first-of-type{*/
-    /*margin-left: 1.5%;*/
-/*}*/
-
-/*.circle_top::before{*/
-    /*display:block;*/
-    /*content:"";*/
-    /*width:60px;*/
-    /*height:60px;*/
-    /*background-color: white;*/
-    /*border:1px solid #C3C3C3;*/
-    /*border-radius: 50%;*/
-    /*position:relative;*/
-    /*top:50px;*/
-    /*left:50%;*/
-    /*margin-left: -30px;*/
-/*}*/
-/*.circle_dot::before{*/
-    /*display:block;*/
-    /*content:"";*/
-    /*width:30px;*/
-    /*height:30px;*/
-    /*background-color: #C3C3C3;*/
-    /*border:1px solid #C3C3C3;*/
-    /*border-radius: 50%;*/
-    /*position:relative;*/
-    /*left: 50%;*/
-    /*top: 50%;*/
-/*}*/
-
-/*!*particular boxes*!*/
-/*.box1{*/
-    /*border:1px solid #C3C3C3;*/
-/*}*/
-/*!*'basic plan'*!*/
-/*.box1 h1{*/
-    /*text-transform: uppercase;*/
-    /*color:#24BA9F;*/
-    /*font-size: 1.5rem;*/
-    /*padding:25px 0;*/
-/*}*/
-/*.number_circle {*/
-    /*border-radius: 50%;*/
-    /*width: 130px;*/
-    /*height: 130px;*/
-    /*border: 1px solid #C3C3C3;*/
-    /*background-color: white;*/
-    /*margin: 0 auto;*/
-/*}*/
-/*.number_circle_text{*/
-    /*padding: 30px;*/
-    /*text-transform: uppercase;*/
-    /*font-size: 3rem;*/
-    /*color: #C3C3C3;*/
-    /*text-align: center;*/
-    /*line-height: 2.5rem;*/
-    /*position:relative;*/
-    /*bottom:-5px;*/
-    /*border-radius: 50%;*/
-/*}*/
-/*.number_circle sup{*/
-    /*position:relative;*/
-    /*font-size: 0.9rem;*/
-    /*top:-25px;*/
-/*}*/
-/*.number_circle p{*/
-    /*font-weight: bold;*/
-/*}*/
-/*.number_circle .small{*/
-    /*font-size: 1rem;*/
-    /*font-weight: normal;*/
-/*}*/
-
-/*.box2{*/
-    /*border:1px solid #C3C3C3;
-}*/
+.bold{
+    font-weight: bold;
+}

@@ -422,8 +422,62 @@ button{
     color:white;
 }
 
+/*FORM SECTION*/
 
+.formLeft{
+    float: left;
+    width: 60%;
+    margin: 20px 30px 50px 0;
+}
 
+.header h2{
+    padding-top: -60px;
+    text-transform: uppercase;
+    padding-bottom:5px;
+    color:#535353;
+    font-size:1.4rem;
+}
+.formRight{
+    float: right;
+    width: 30%;
+    margin: 20px 0 50px;
+}
+
+/*FORM*/
+
+.formLeft input[type=text],
+input[type=email]{
+    border-radius: 2px;
+    padding: 15px;
+    font-size: 1.6rem;
+    border: 1px solid #27C7AB;
+    margin-bottom: 30px;
+    width:90%;
+}
+textarea{
+    width:90%;
+    padding: 15px;
+    font-size: 1.6rem;
+    border: 1px solid #27C7AB;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 2rem;
+    opacity: .5; /* Firefox */
+    font-family: 'Raleway', sans-serif;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 2rem;
+    opacity: .5;
+    font-family: 'Raleway', sans-serif;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    font-size: 2rem;
+    opacity: .5;
+    font-family: 'Raleway', sans-serif;
+}
 
 
 

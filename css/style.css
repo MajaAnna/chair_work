@@ -174,19 +174,22 @@ button{
     width: 32%;
     height:250px;
     margin-right: 2%;
+    float:left;
+    position:relative;
 }
 .block:last-of-type{
     margin-right:0;
 }
-.photo1{
-    background: url("../images/box1_img.jpg") no-repeat center/cover;
-    float:left;
-    position:relative;
+.overlay{
 }
-.photo2{
-    background: url("../images/box2_img.jpg") no-repeat center/cover;
-    float: left;
+.overlay h3{
     position:relative;
+    font-weight: bold;
+    width:100%;
+    padding: 10px 15px 22px;
+    background-color: rgba(255, 255, 255, 0.5);
+    top:-80px;
+    text-indent: 5px;
 }
 .block_text{
     float: left;
@@ -300,10 +303,11 @@ button{
 .price_text p:first-child{
     font-weight: bold;
     font-size: 3rem;
+    margin-left: -15px;
 }
 .price_text sup{
     font-size:1rem;
-    right:10px;
+    right:5px;
     top:-25px;
 }
 .price_text p:last-child{
@@ -339,20 +343,28 @@ button{
     color:#959595;
     font-size: 1.3rem;
 }
-.box1 ul li{
-    padding: 10px;
+.box1 ul{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
     border-left:1px solid #C3C3C3;
     border-right:1px solid #C3C3C3;
 }
-.box2 ul li{
+.box1:first-child ul{
+    border-right: none;
+}
+.box1:last-child ul{
+    border-left: none;
+}
+.boxes li{
     padding: 10px;
+}
+.box2 ul li{
     border-left:1px solid #27C7AB;
     border-right:1px solid #27C7AB;
 }
 
 .line_dark_top{
     background-color: #E4E4E4;
-    border-top: 1px solid white
 }
 .line_dark{
     background-color: #E4E4E4;
@@ -423,11 +435,12 @@ button{
 .price_text2 p:first-child{
     font-weight: bold;
     font-size: 3rem;
+    margin-left: -15px;
 }
 .price_text2 sup{
     font-size:1rem;
-    right:10px;
     top:-25px;
+    right:5px;
 }
 .price_text2 p:last-child{
     font-size: 1rem;

@@ -54,7 +54,42 @@ document.addEventListener('DOMContentLoaded', function(){
         sliderElem[counter].classList.add('visible');
     });
 
+
     /**calculator**/
 
+
+    /**toggle lists**/
+    var listArrow = document.querySelectorAll('.list_arrow'),
+        listPanel = document.querySelectorAll('.drop_down_list ul');
+
+    listPanel.forEach(function(value){
+        value.hidden = true;
+    });
+
+    listArrow.forEach(function(value){
+        value.addEventListener('click', function(){
+            this.nextElementSibling.hidden = !this.nextElementSibling.hidden;
+        });
+    });
+
+    /**summary**/
+    var listItemsName = document.querySelectorAll('.name li'),
+        listItemsFabric = document.querySelectorAll('.fabric li'),
+        listItemsChairsColors = document.querySelectorAll('.chairsColors li'),
+        panelLeft = document.querySelector('.panel_left'),
+        panelRight = document.querySelector('.panel_right'),
+        sum = document.querySelector('.sum > strong');
+
+    listItemsName.forEach(function(value){
+       value.addEventListener('click', function(){
+
+       });
+    });
+
+
+    console.log(listItems);
+    console.log(panelLeft);
+    console.log(panelRight);
+    console.log(sum);
 
 });

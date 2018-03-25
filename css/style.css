@@ -29,7 +29,7 @@ body{
 }
 
 /*HEADER*/
-header .main-header{
+header{
     background-color: black;
     color: white;
     font-size: 1.2rem;
@@ -167,7 +167,7 @@ ol ul > li{
     font-size: 1rem;
     padding-bottom:30px;
 }
-button .btn{
+button{
     font-size: 1.5rem;
     padding:15px 40px 15px 40px;
     text-transform: uppercase;
@@ -184,6 +184,7 @@ button .btn{
     z-index: 20;
     float:left;
     width:15%;
+    cursor: pointer;
 }
 
 /*sekcja ze zdjęciami*/
@@ -238,7 +239,7 @@ button .btn{
 /*sekcja z cennikiem*/
 .section_slider{
     background-color: #F1F1F1;
-    margin: 40px 0 20px 0;
+    margin: 40px 0 0 0;
     padding:30px 0 30px 0;
     text-transform: uppercase;
     text-align:center;
@@ -254,6 +255,7 @@ button .btn{
     font-size: 1.5rem;
     margin-top: -60px;
 }
+
 .boxes{
     width: 32%;
     height:540px;
@@ -626,6 +628,8 @@ footer{
 
 /***********************************************************************************/
 /*CALCULATOR*/
+
+
 .application {
     background-color: #f9f9f9;
     padding:30px 0;
@@ -639,14 +643,12 @@ footer{
     text-align: right;
 }
 
-
 .inline {
     display:inline-block;
-    width:300px;
+    width:32%;
     padding:14px;
     vertical-align: top;
 }
-
 
 .form {
     margin-top:50px;
@@ -654,7 +656,7 @@ footer{
 .drop_down_list {
     border:1px solid #8de0d2;
     width: 280px;
-    height:38px;
+    height:50px;
     background-color: white;
     margin-top:22px;
     padding: 8px 12px;
@@ -666,7 +668,6 @@ footer{
     color: #e2e2e2;
     font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
 }
-
 
 .checkbox {
     position: relative;
@@ -727,6 +728,7 @@ footer{
     margin-left: 15px;
     color: #aeaeae;
 }
+
 .image_part img{
     margin-top: 110px;
     margin-left: 38px;
@@ -735,7 +737,7 @@ footer{
 
 .application .green_bell {
     background-color: #24baa0;
-    width: 200px;
+    width: 265px;
     height: 6px;
     display: inline-block;
     margin: 5px 0 5px 0;
@@ -845,7 +847,7 @@ footer{
     z-index: 2;
     position: absolute;
     top: 54px;
-    display:none;
+    /*display:none;*/
 }
 .list_panel li {
     margin-top:10px;
@@ -855,4 +857,16 @@ footer{
 
 .title {
     height: 30px;
+}
+.inner_sections{
+    width:31%;
+    margin:0 1.7% 30px 0;
+}
+.inner_sections:last-of-type{
+    width:31%;
+    margin-right:0;
+}
+.header_composition{
+    background-color: #f9f9f9;
+    line-height: 20px;
 }

@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 
-    /**calculator**/
+    /**CALCULATOR**/
 
 
     /**toggle lists**/
@@ -73,23 +73,108 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     /**summary**/
+    var dropDownList = document.querySelectorAll('.drop_down_list ul'),
+        panelLeft = document.querySelector('.panel_left'),
+        panelLeftChildren = panelLeft.children,
+        panelRight = document.querySelector('.panel_right'),
+        panelRightChildren = panelRight.children,
+        sum = document.querySelector('.sum');
+
+    sum.innerText = 0;
+
+    function summary() {
+        for (var i = 0; i < panelRightChildren.length; i++) {
+            sum.innerText = 0;
+            if (parseInt(panelRightChildren[i].innerText)) {
+                console.log('wartość');
+                sum.innerText += parseInt(panelRightChildren[i].innerText);
+            } else {
+                console.log('zero');
+                sum.innerText = 0;
+            }
+        }
+    }
+
     var listItemsName = document.querySelectorAll('.name li'),
         listItemsFabric = document.querySelectorAll('.fabric li'),
         listItemsChairsColors = document.querySelectorAll('.chairsColors li'),
-        panelLeft = document.querySelector('.panel_left'),
-        panelRight = document.querySelector('.panel_right'),
-        sum = document.querySelector('.sum > strong');
+        transport = document.querySelector('#transport'),
+
+        //panel left
+        //panelLeft = document.querySelector('.panel_left'),
+        chairTitle = panelLeft.querySelector('h4'),
+        chairColor = panelLeft.querySelector('.color'),
+        chairPattern = panelLeft.querySelector('.pattern'),
+        chairTransport = panelLeft.querySelector('.transport'),
+
+        //panel right
+        //panelRight = document.querySelector('.panel_right'),
+        chairTitleValue = panelRight.querySelector('h4'),
+        chairColorValue = panelRight.querySelector('.color'),
+        chairPatternValue = panelRight.querySelector('.pattern'),
+        chairTransportValue = panelRight.querySelector('.transport');
 
     listItemsName.forEach(function(value){
        value.addEventListener('click', function(){
-
+           chairTitle.innerText = this.innerText;
+           var value1 = parseInt(this.dataset.price);
+           chairTitleValue.innerText = value1;
+           //sum = parseInt(this.dataset.price);
        });
     });
 
+    listItemsFabric.forEach(function(value){
+        value.addEventListener('click', function(){
+            chairPattern.innerText = this.innerText;
+            var value2 = parseInt(this.dataset.price);
+            chairPatternValue.innerText = value2;
+        });
+    });
 
-    console.log(listItems);
-    console.log(panelLeft);
-    console.log(panelRight);
-    console.log(sum);
+    listItemsChairsColors.forEach(function(value){
+        value.addEventListener('click', function(){
+            chairColor.innerText = this.innerText;
+            var value3 = parseInt(this.dataset.price);
+            chairColorValue.innerText = value3;
+        });
+    });
+
+    transport.addEventListener('change', function(){
+        if(transport.checked){
+            chairTransport.innerText = "Transport";
+            var value4 = parseInt(this.dataset.transportPrice);
+            chairTransportValue.innerText = value4;
+        } else {
+            chairTransport.innerText = "";
+            value4 = "";
+            chairTransportValue.innerText = value4;
+        }
+    });
+
+
+
+    summary();
+
+    // function prizing(){
+    //         for(var i = 0; i < dropDownList.length; i++){
+    //             for(var j = 0; j < dropDownList[i].children.length; j++){
+    //                 dropDownList[i].children[j].addEventListener('click', function(){
+    //                     var value = dropDownList[i].children[j].data.price;
+    //                     for(var k = 0; k < panelRightChildren.length; k++){
+    //                         panelRightChildren[k].innerText = value.innerText;
+    //                     }
+    //                 })
+    //             }
+    //
+    //         }
+    // }
+    //
+    // prizing();
+
+    // panelLeftSpans.forEach(function(value){
+    //     var price = Number(value.innerText);
+    //     sum.innerText = price;
+    // });
+
 
 });
